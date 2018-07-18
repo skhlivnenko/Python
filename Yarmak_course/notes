@@ -1,0 +1,218 @@
+Lesson 1
+
+-----------------------------------------------------------------
+Lesson 2
+	PyCharm
+		New project
+		Debugger
+			put stop
+	Input
+		L2X2
+			USD = input("How much USD do you want yo change?\n")
+			RATE = input ("What is rate?\n")
+			UAH = USD*RATE
+			print "You'll get {} UAH for {} USD".format(UAH, USD)
+	Compare
+		super high priority
+			+ - etc
+		high priority
+			a<b
+			>
+			==
+			!=
+			<=
+			>=
+		low priority
+			and
+			or
+	Branching
+		IF
+		ELIF
+		ELSE
+		L2X3
+			Ввести 3 числа і вивести найменше
+			a=input("Input first number: ")
+			b=input("Input second number: ")
+			c=input("Input third number: ")
+			if a<c and a<b:
+			    print "First is lowest ({})".format(a)
+			elif b<c and b<a:
+			    print "Second is lowest ({})".format(b)
+			else:
+			    print "Third is lowest ({})".format(c)
+	Cycles
+		for v in range(1,10):
+		while <exp>:
+		L2X4
+			Вивести таблицю множення на 3
+			1 варіант
+				#show multiplication table for 3 using "for"
+				for v in range(1,10):
+				    print "{}".format(v*3)
+			2 варіант
+				#show multiplication table for 3 using "while"
+				w = 3
+				while w<= 3*9:
+				    print "{}".format(w)
+				    w = w+3
+		break
+			вийти із циклу
+		continue
+			на наступну ітерацію
+		L2X5
+			Вивести таблицю множення на 3 до 3*3
+			Вивести таблицю множення на 3, крім для 3 і 4
+
+-----------------------------------------------------------------
+Lesson 3
+	Data Type
+		None
+			= False by Default
+		a = None
+	Functions
+		reserved word "def"
+			def <name> (<parameters>):
+		example
+			def sum(a,b):
+			return a+b
+				optional operator
+				if without return - you'll get "None"
+	Variable Visibility Area
+		for simple types
+			a = 7
+			b = 5
+			b = s(a,b)
+				-2
+			def s (a, b):
+				def (7,5)
+			a = b - a
+				independent a = 5-7 = -2
+			return a
+				-2
+			scope 2
+			scope 1
+		global variable
+			def s(a,b):
+			global a
+			a = b - a
+				a = 5 - 7
+			return a
+				-2
+					but overwrites A in global scope
+	Factorial
+		s! = 1*2*3*4*5
+		Recursion
+			def fuctorial (n):
+			if n=1:
+			return 1
+			return functioanl(n-1)*n:
+			fuctorial(5)
+			execution steps
+				1
+					5*f(4)
+				2
+					4*f(3)
+				3
+					3*f(2)
+				4
+					2*f(1)
+					2*1
+		L3X2
+			Вывести число N
+			вивести в консоль всі числа від 0 до N
+			2 способи
+				цикл
+				рекурсія
+
+-----------------------------------------------------------------
+Lesson 4
+	String Encoding
+		ASCII
+			0..255
+			1 byte
+		UTF-8
+			2 bytes
+			u"str"
+				convert string to utf-8
+				used to merge strings
+		.decode()
+			.decode()
+		.lower()
+	Strings
+		symbol is string
+			not char
+		indexing
+			s[index]
+			from start
+				0, 1, 2...
+			from end
+				-1, -2, -3...
+		slicing
+			s[start:finish]
+			s[1:3]
+			start - included
+			finish - not included
+			s[:3]
+				start from begining
+			s[1:]
+				go to end
+
+-----------------------------------------------------------------
+Lesson 5
+Python 5.
+Data Structures
+	Список
+		Набір елементів
+			l = [ ]
+				аналогічно
+					list()
+			<variable> = [<item1>,<item2>,<item3>]
+		Навіть різних типів в одному списку
+			l2 = [2,True,"sss",[1,2]]
+		индексация от 0 до N-1
+		довжина списку
+			len(l)
+		append
+			додає елементи  в кінець
+				L.append(True)
+				L.append(2)
+				-> L=[True, 2]
+		del
+			видалити елемент по індексу
+			del [2]
+				видалити 3й елемент
+		переписати елемент
+			L [index] = value
+			L [index] = "7"
+		видимість
+			працює як global по дефолту
+			тобто змінений у функції список - зміниться скрізь
+			список передається завжди по лінку
+			щоб з ним працювати як з простим типом використовуємо deepcopy
+		пройтись по елементам
+			L for item in [2,3]
+			if 2 in L
+		L5X2
+			вивести к-сть парних/непарних елементів у списку
+		L5X3
+			вивести на екран матрицю і суму її елементів
+		L5X4
+			Subtopic 1
+	Картеж - tuple()
+		круглі дужки (замість квадратних у списків)
+			t = tuple ()
+			щоб створити картеж з 1 елементом
+				t=(1,)
+				ставимо кому
+		це немодифіковані списки
+			"відбиток"
+		не можна міняти ні к-сть елементів, ні самі елементи
+		кортежі використовують як константа, наприклад масив допустимих значень
+
+    Пусть эта задача у нас будет на выходные:
+    В игре следующие правила. В ряд лежат 25 монет. За ход разрешается брать одну или две рядом лежащие монеты. Проигрывает тот, кому нечего брать. Реализовать возможность игры пользователя с компьютером.
+
+    На среду домашка: (L5X5_HT_lowest3numbers)
+    Дан массив. Найдите три последовательных элемента в массиве, сумма которых максимальна.
+-----------------------------------------------------------------
+Lesson 6

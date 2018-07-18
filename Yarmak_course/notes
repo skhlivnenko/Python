@@ -216,3 +216,93 @@ Data Structures
     Дан массив. Найдите три последовательных элемента в массиве, сумма которых максимальна.
 -----------------------------------------------------------------
 Lesson 6
+
+Python L6
+	Словник
+		a = {}
+			dict()
+		a = {1:1}
+			key
+				only unique
+				rewrite if conflict
+			value
+		any types in
+		get value
+			a[key] => value
+			seek by key
+		add/update value
+			key already exist?
+				yes
+					update value
+				no
+					add key & value
+			a.update({1:2})
+			a.update({3:4})
+				{1:2,3:4}
+			add one
+				a[key]=v
+			add several
+		delete
+			del a[key]
+		L6X1
+			get library from array, using index as key
+		a = {1:2, 3:4}
+		for k, v in a.item()
+			print k
+				1
+			print v
+				2
+		for p in a.item()
+			print p
+				{1:2}
+		for i in a
+			print i
+				print key
+			a [i] => value
+		"in" check only keys
+			if key in a
+			if key not in a
+		L6X2
+			have library, get list
+	Object Structures
+		String
+		List
+			Array
+		Library
+		Tupple
+	Exceptions
+		Вийнятки
+			програмні
+				на вхід функції на подані невірні дані
+			системні
+				ділити на 0
+		ловити
+			try:
+			...
+			except:
+				for all types
+			except KeyValue as e:
+				for certain Class
+				e contain variable
+			pass
+				make skip in code
+			finally:
+				work anyway
+			else:
+				in case there are no active exceptions
+		створити
+			raise Exception("...")
+			raise
+		example
+			1
+				try:
+				f(1)
+				except InputError
+				pass
+			2
+				def f(a)
+				try:
+				return 1/a
+					a=0
+				except:
+				raise
